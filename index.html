@@ -1,8 +1,23 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="">
 
 <head>
 <style>
+
+    body{
+        margin: 0;
+        font-size: 14px;
+        font-family: arial, sans-serif;
+    }
+
+    .footer{
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+    }
+    .back{
+        background-color: #f2f2f2;
+    }
 
     img {
         max-width: 100%;
@@ -53,10 +68,12 @@
     }
     .flex-box{
         display: flex;
+        position: absolute;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 600px;
+        height: 800px;
+        width: 100%;
     }
 
     li{
@@ -65,6 +82,10 @@
         text-decoration: none;
         list-style-type: none;
     }
+    li a{
+        text-decoration: none;
+        color: black;
+    }
 
     li:hover{
         text-decoration: underline;
@@ -72,20 +93,24 @@
 
 
 </style>
+    <title></title>
 </head>
 
 
 
 <body>
+
+<header>
 <div>
         <ul>
-            <li><a>about</a></li>
-            <li><a>store</a></li>
-            <li style="float:right"><a>Sign In</a></li>
-            <li style="float:right"><a>images</a></li>
-            <li style="float:right"><a>gmail</a></li>
+            <li><a href="">About</a></li>
+            <li><a>Store</a></li>
+            <li style="float:right"><a href="">Sign In</a></li>
+            <li style="float:right"><a href="">Images</a></li>
+            <li style="float:right"><a href="">Gmail</a></li>
         </ul>
 </div>
+</header>
 
 <div class="flex-box">
 <div>
@@ -102,10 +127,18 @@
 </div>
 </body>
 
-<footer>
 
-
-
-</footer>
+<div class="footer">
+    <div class="back">
+        <ul>
+            <li><a>Advertising</a></li>
+            <li><a>Business</a></li>
+            <li><a>How Search Works</a></li>
+            <li style="float: right"><a>Privacy</a></li>
+            <li style="float: right"><a>Terms</a></li>
+            <li style="float: right"><a>Settings</a></li>
+        </ul>
+    </div>
+</div>
 </html>
 <!DOCTYPE HTML>
