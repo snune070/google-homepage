@@ -4,19 +4,49 @@
 <head>
 <style>
 
+    *{
+     margin: 0;
+     padding: 0;
+    }
+
     body{
         margin: 0;
         font-size: 14px;
         font-family: arial, sans-serif;
     }
 
+    li{
+        padding: 20px;
+        float: left;
+        text-decoration: none;
+        list-style-type: none;
+        color: black;
+    }
+
+    li a{
+        color: black;
+        display: block;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    li:hover{
+        text-decoration: underline;
+    }
+
+    .button{
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 9px 23px;
+        background-color: #1a73e8;
+        color: white;
+    }
+
     .footer{
        position: absolute;
        bottom: 0;
        width: 100%;
-    }
-    .back{
-        background-color: #f2f2f2;
+       background-color: #f2f2f2;
     }
 
     img {
@@ -30,13 +60,13 @@
         object-fit: contain;
     }
 
-
     .wrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
         max-width: 100%;
         position: relative;
+        top: 50px;
     }
 
     .search{
@@ -48,6 +78,7 @@
         border-radius: 24px;
         border: 1px solid #dfe1e5;
     }
+
     .search-icon{
         position: absolute;
         margin-top: 2px;
@@ -56,61 +87,39 @@
         top: 12px;
         left: 8px;
     }
-
-
-    .clear-icon {
-        position: absolute;
-        top: 10px;
-        bottom: 50px;
-        right: 8px;
-        width: 10px;
-        cursor: pointer;
-    }
+    
     .flex-box{
         display: flex;
-        position: absolute;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 800px;
+        height: 600px;
         width: 100%;
     }
 
-    li{
-        padding: 20px;
-        float: left;
-        text-decoration: none;
-        list-style-type: none;
+    .button{
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 9px 23px;
+        background-color: #1a73e8;
+        color: white;
     }
-    li a{
-        text-decoration: none;
-        color: black;
-    }
-
-    li:hover{
-        text-decoration: underline;
-    }
-
 
 </style>
     <title></title>
 </head>
 
-
+<div>
+    <ul>
+        <li><a href="https://about.google/a/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+        <li><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+        <li style="float:right"><a><button type="button" class="button">Sign In</button></a></li>
+        <li style="float:right"><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Images</a></li>
+        <li style="float:right"><a href="https://www.google.com/gmail/about/#">Gmail</a></li>
+    </ul>
+</div>
 
 <body>
-
-<header>
-<div>
-        <ul>
-            <li><a href="">About</a></li>
-            <li><a>Store</a></li>
-            <li style="float:right"><a href="">Sign In</a></li>
-            <li style="float:right"><a href="">Images</a></li>
-            <li style="float:right"><a href="">Gmail</a></li>
-        </ul>
-</div>
-</header>
 
 <div class="flex-box">
 <div>
@@ -120,16 +129,13 @@
     <div class="wrapper">
         <img class="search-icon" alt="search icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
         <label id="search"> <input class="search" placeholder="" type="text"> </label>
-        <img class="clear-icon" alt="Clear Bar" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
     </div>
-
-
 </div>
 </body>
 
 
 <div class="footer">
-    <div class="back">
+    <div>
         <ul>
             <li><a>Advertising</a></li>
             <li><a>Business</a></li>
@@ -140,5 +146,6 @@
         </ul>
     </div>
 </div>
+
 </html>
 <!DOCTYPE HTML>
